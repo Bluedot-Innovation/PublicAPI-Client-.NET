@@ -14,6 +14,7 @@ using BluedotPublicApiClient.checkinactivityclient;
 /**
  * @author Bluedot Innovation
  * Main program to execute the various client examples
+ * If you don't have a customer api key then head to www.bluedotinnovation.com
  */
 
 namespace BluedotPublicApiClient

@@ -18,7 +18,7 @@ namespace BluedotPublicApiClient.zoneclient
         private static String bdRestUrl           = "https://api.bluedotinnovation.com/1/actions";
         private static String bdZoneId            = "7022428f-c852-487d-a9bc-7029adbf7245"; //This is the id of the zone being updated. This can be fetched by calling zones/getAll API
 
-        public void addActionWithConditions()
+        public void createActionWithConditions()
         {
             postToService(getJsonApplicationActionWithConditions());
         }
