@@ -14,7 +14,7 @@ using System.Threading.Tasks;
  * Update Action with conditions REST client shows updating an action with conditions to an existing zone using .net http web api libray
  * All conditions attached to an Action can be updated by providing the id. id has to be provided for update calls if the id is not provided then a new condition will be created
  */
-namespace BluedotPublicApiClient.zoneclient
+namespace BluedotPublicApiClient.actionclient
 {
     public class UpdateConditions
     {

@@ -19,7 +19,7 @@ using System.Threading.Tasks;
  * Update Action REST client demonstrating adding a actions to an existing zone using net http web api libraries
  */
 
-namespace BluedotPublicApiClient.zoneclient
+namespace BluedotPublicApiClient.actionclient
 {
     public class UpdateActions
     {

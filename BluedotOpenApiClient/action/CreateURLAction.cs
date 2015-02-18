@@ -10,7 +10,7 @@ using System.IO;
 using System.Threading.Tasks;
 
 
-namespace BluedotPublicApiClient.zoneclient
+namespace BluedotPublicApiClient.actionclient
 {
     public class CreateURLAction
     {

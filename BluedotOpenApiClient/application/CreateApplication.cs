@@ -17,15 +17,15 @@ namespace BluedotPublicApiClient.applicationclient
         public void create()
         {
             String bdCustomerApiKey = "73ad7b80-7c4e-11e4-a2d3-b8ca3a6b879d";
-            String bdRestUrl = "http://bdapplication4.cloudapp.net:3033/1/applications";
+            String bdRestUrl        = "https://api.bluedotinnovation.com/1/applications";
 
             String application =
                "{" +
                  "\"security\": {" +
-                          /*
-                                customerApiKey is generated when customer registers first time. It is also available
-                               on the PointAccess interface in the Edit Profile section.
-                          */
+                /*
+                  customerApiKey is generated when customer registers first time. It is also available
+                  on the PointAccess interface in the Edit Profile section.
+                */
                          "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
                "}," +
                "\"content\": { " +
@@ -37,7 +37,6 @@ namespace BluedotPublicApiClient.applicationclient
                         "}" +
                    "}" +
              "}";
-
 
             
             /*Or hand build json using key value pair
@@ -71,9 +70,6 @@ namespace BluedotPublicApiClient.applicationclient
             {
                 Console.WriteLine("{0} ({1})", (int) serverResponse.StatusCode, serverResponse.Content.ReadAsStringAsync().Result);
             }
-
         }
     }
-
-
 }

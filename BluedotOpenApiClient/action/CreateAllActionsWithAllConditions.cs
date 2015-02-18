@@ -13,7 +13,7 @@ using System.Threading.Tasks;
  * @author Bluedot Innovation
  * Add Action with conditions REST client shows adding an action with conditions to an existing zone using .net http web api libray
  */
-namespace BluedotPublicApiClient.zoneclient
+namespace BluedotPublicApiClient.actionclient
 {
     public class CreateAllActionsWithAllConditions
     {
