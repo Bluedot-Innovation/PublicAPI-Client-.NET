@@ -55,6 +55,7 @@
     <Compile Include="application\UpdateApplication.cs" />
     <Compile Include="application\GetAllApplications.cs" />
     <Compile Include="checkin\GetCheckinActivities.cs" />
+    <Compile Include="fence\DeleteFence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="action\CreateAllActions.cs" />
@@ -70,10 +71,10 @@
     <Compile Include="action\CreateVibrationActionWithConditions.cs" />
     <Compile Include="zone\CreateZone.cs" />
     <Compile Include="action\CreateAllActionsWithAllConditions.cs" />
-    <Compile Include="fence\BDAddFenceClient.cs" />
+    <Compile Include="fence\AddFence.cs" />
     <Compile Include="action\UpdateActions.cs" />
     <Compile Include="action\UpdateConditions.cs" />
-    <Compile Include="fence\BDUpdateFenceClient.cs" />
+    <Compile Include="fence\UpdateFence.cs" />
     <Compile Include="zone\DeleteZone.cs" />
     <Compile Include="zone\UpdateZone.cs" />
     <Compile Include="zone\GetAllZones.cs" />

@@ -19,7 +19,7 @@ namespace BluedotPublicApiClient.applicationclient
         {
             String bdCustomerApiKey = "73ad7b80-7c4e-11e4-a2d3-b8ca3a6b879d";
             String bdApplicationId  = "564ecdc0-7e86-11e4-95ff-a0481cdba490";
-            String bdRestUrl        = "http://bdapplication4.cloudapp.net:3033/1/applications";
+            String bdRestUrl        = "https://api.bluedotinnovation.com/1/applications";
 
             String application =
                "{" +

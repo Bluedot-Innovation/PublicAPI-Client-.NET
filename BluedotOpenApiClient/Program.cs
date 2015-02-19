@@ -10,6 +10,9 @@ using System.IO;
 using BluedotPublicApiClient.applicationclient;
 using BluedotPublicApiClient.zoneclient;
 using BluedotPublicApiClient.checkinactivityclient;
+using BluedotPublicApiClient.actionclient;
+
+
 
 /**
  * @author Bluedot Innovation
@@ -25,6 +28,17 @@ namespace BluedotPublicApiClient
         {
 
             /*Get a list of applications for a customer*/
+
+            DeleteAction actionToDelete = new DeleteAction();
+            actionToDelete.delete();
+            
+            DeleteZone deleteZone = new DeleteZone();
+            deleteZone.delete();
+            
+            
+            DeleteApplication apptoDelete = new DeleteApplication();
+            apptoDelete.delete();
+            
             GetAllApplications appsClient = new GetAllApplications();
             appsClient.getAllApplicationsForCustomer();
             
