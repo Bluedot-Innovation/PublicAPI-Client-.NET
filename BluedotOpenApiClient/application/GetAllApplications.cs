@@ -21,7 +21,7 @@ namespace BluedotPublicApiClient.applicationclient
         private static String apiKey         = "b817bb5d-4b58-4f41-be5f-528fd4c7c95c";
         private static String customerId     = "ec9d9683-3337-4ddd-8613-e06a7da0b9f7";
         private static String customerApiKey = "ca4c8d11-6942-11e4-ba4b-a0481cdc3311";
-        String bdRestUrl                     = "http://localhost:3033/1/application/getAll?customerApiKey=" + customerApiKey + "&apiKey=" + apiKey + "&customerId=" + customerId;
+        String bdRestUrl                     = "https://api.bluedotinnovation.com/1/application/getAll?customerApiKey=" + customerApiKey + "&apiKey=" + apiKey + "&customerId=" + customerId;
 
         public void getAllApplicationsForCustomer()
         {
