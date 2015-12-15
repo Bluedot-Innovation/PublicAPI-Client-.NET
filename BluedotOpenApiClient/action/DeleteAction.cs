@@ -19,7 +19,7 @@ namespace BluedotPublicApiClient.actionclient
 {
     class DeleteAction
     {
-        public void delete()
+        public void delete() 
         {
             String bdCustomerApiKey = "835d9460-7b91-11e4-bcb7-a0481cdc3311";
             String bdZoneId         = "3846fa1d-11f7-4044-8eab-0977f90d987e";

@@ -26,13 +26,17 @@ namespace BluedotPublicApiClient.beacon
         private static String bdBeaconId          = "977444dc-968a-4b13-84d8-4b194b794c18";
         private static String bdRestUrl           = "https://api.bluedotinnovation.com/1/beacons";
 
-        public void update()
+       public void update()
+        {
+            postToService(getJsonUpdatedBeacon());
+        }
+          private void postToService(String json)
         {
             HttpClient httpRestClient = new HttpClient();
             httpRestClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpContent jsonUpdateBeaconContent = new StringContent(getjsonUpdateBeacon());
-            jsonFenceContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            HttpContent jsonUpdateBeaconContent = new StringContent(json);
+            jsonUpdateBeaconContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
             HttpResponseMessage serverResponse = httpRestClient.PostAsync(new Uri(bdRestUrl), jsonUpdateBeaconContent).Result;
             if (serverResponse.IsSuccessStatusCode)

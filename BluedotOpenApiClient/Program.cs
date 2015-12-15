@@ -1,16 +1,17 @@
-﻿using System;
-using System.Linq;
-using System.Text;
+﻿using BluedotPublicApiClient.actionclient;
+using BluedotPublicApiClient.applicationclient;
+using BluedotPublicApiClient.beacon;
+using BluedotPublicApiClient.checkinactivityclient;
+using BluedotPublicApiClient.zoneclient;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
-using System.Net;
-using System.IO;
-using BluedotPublicApiClient.applicationclient;
-using BluedotPublicApiClient.zoneclient;
-using BluedotPublicApiClient.checkinactivityclient;
-using BluedotPublicApiClient.actionclient;
 
 
 
@@ -53,7 +54,20 @@ namespace BluedotPublicApiClient
             /*Create a new zone*/
             CreateZone createZoneClient = new CreateZone();
             createZoneClient.create();
-          
+           /*Create a new Beacon*/
+            BDCreateBeacon beaconClient = new BDCreateBeacon();
+            beaconClient.create();
+            DeleteBeacon deleteBeaconClient = new DeleteBeacon();
+            deleteBeaconClient.delete();
+            GetBeacons getbeaconsClient = new GetBeacons();
+            getbeaconsClient.getBeacons();
+            UpdateBeacon updatebeaconClient = new UpdateBeacon();
+            updatebeaconClient.update();
+
+           /*Add beacon  to an existing zone*/
+            BDAddBeacontoZone beacontozoneClient = new BDAddBeacontoZone();
+            beacontozoneClient.create();
+
 
             /*Create a geo-fence to an existing zone*/
             BDAddFenceClient fenceClient = new BDAddFenceClient();
