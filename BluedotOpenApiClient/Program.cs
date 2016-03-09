@@ -31,93 +31,93 @@ namespace BluedotPublicApiClient
             /*Get a list of applications for a customer*/
 
             DeleteAction actionToDelete = new DeleteAction();
-            actionToDelete.delete();
+            //actionToDelete.delete();
             
             DeleteZone deleteZone = new DeleteZone();
-            deleteZone.delete();
+            //deleteZone.delete();
             
             
             DeleteApplication apptoDelete = new DeleteApplication();
-            apptoDelete.delete();
+            //apptoDelete.delete();
             
             GetAllApplications appsClient = new GetAllApplications();
-            appsClient.getAllApplicationsForCustomer();
+            //appsClient.getAllApplicationsForCustomer();
             
             /*Add an application to the Bluedot backend*/
             CreateApplication bdApplicationClient = new CreateApplication();
-            bdApplicationClient.create();
+            //bdApplicationClient.create();
             
             /*Get a list of zone id and name for a given customer*/
             GetAllZones zones = new GetAllZones();
-            zones.getAllZonesForCustomer();
+            //zones.getAllZonesForCustomer();
 
             /*Create a new zone*/
             CreateZone createZoneClient = new CreateZone();
-            createZoneClient.create();
+            //createZoneClient.create();
            /*Create a new Beacon*/
-            BDCreateBeacon beaconClient = new BDCreateBeacon();
-            beaconClient.create();
+           // BDCreateBeacon beaconClient = new BDCreateBeacon();
+            //beaconClient.create();
             DeleteBeacon deleteBeaconClient = new DeleteBeacon();
             deleteBeaconClient.delete();
-            GetBeacons getbeaconsClient = new GetBeacons();
-            getbeaconsClient.getBeacons();
-            UpdateBeacon updatebeaconClient = new UpdateBeacon();
-            updatebeaconClient.update();
+           // GetBeacons getbeaconsClient = new GetBeacons();
+           // getbeaconsClient.getBeacons();
+            //UpdateBeacon updatebeaconClient = new UpdateBeacon();
+            //updatebeaconClient.update();
 
            /*Add beacon  to an existing zone*/
-            BDAddBeacontoZone beacontozoneClient = new BDAddBeacontoZone();
-            beacontozoneClient.create();
+            //BDAddBeacontoZone beacontozoneClient = new BDAddBeacontoZone();
+            //beacontozoneClient.create();
 
 
             /*Create a geo-fence to an existing zone*/
-            BDAddFenceClient fenceClient = new BDAddFenceClient();
-            fenceClient.addFence(); //Fence client has JSON for various shapes for your reference
+            //BDAddFenceClient fenceClient = new BDAddFenceClient();
+            //fenceClient.addFence(); //Fence client has JSON for various shapes for your reference
 
             /*Update an existing geo-fence*/
-            BDUpdateFenceClient updateFenceClient = new BDUpdateFenceClient();
-            updateFenceClient.updateFence();
+            //BDUpdateFenceClient updateFenceClient = new BDUpdateFenceClient();
+           // updateFenceClient.updateFence();
 
 
             CreateMessageAction messageActionClient = new CreateMessageAction();
-            messageActionClient.create();
+            //messageActionClient.create();
 
             CreateURLAction urlActionClient = new CreateURLAction();
-            urlActionClient.create();
+           // urlActionClient.create();
 
             CreateVibrationAction bdVibrationActionClient = new CreateVibrationAction();
-            bdVibrationActionClient.create();
+          //  bdVibrationActionClient.create();
 
             CreateSoundAction bdSoundActionClient = new CreateSoundAction();
-            bdSoundActionClient.create();
+        //    bdSoundActionClient.create();
 
             /*Add conditions to actions*/
             CreateAllActionsWithAllConditions bdConditionsClient = new CreateAllActionsWithAllConditions();
-            bdConditionsClient.addConditionsToMessageAction();
+      //      bdConditionsClient.addConditionsToMessageAction();
 
 
             CreateMessageActionWithConditions bdCreateMessageActionWithConditions = new CreateMessageActionWithConditions();
-            bdCreateMessageActionWithConditions.createActionWithConditions();
+    //        bdCreateMessageActionWithConditions.createActionWithConditions();
             
             CreateApplicationActionWithConditions bdCreateApplicationActionWithConditions = new CreateApplicationActionWithConditions();
-            bdCreateApplicationActionWithConditions.createActionWithConditions();
+  //          bdCreateApplicationActionWithConditions.createActionWithConditions();
 
             CreateSoundActionWithConditions bdCreateSoundActionWithConditions = new CreateSoundActionWithConditions();
-            bdCreateSoundActionWithConditions.createActionWithConditions();
+//            bdCreateSoundActionWithConditions.createActionWithConditions();
 
             CreateApplicationActionWithConditions bdCreateApplicationActionWithCondtions = new CreateApplicationActionWithConditions();
-            bdCreateApplicationActionWithCondtions.createActionWithConditions();
+//            bdCreateApplicationActionWithCondtions.createActionWithConditions();
 
             CreateVibrationActionWithConditions bdCreateVibrationActionWithConditions = new CreateVibrationActionWithConditions();
-            bdCreateVibrationActionWithConditions.createActionWithConditions();
+            //bdCreateVibrationActionWithConditions.createActionWithConditions();
 
             CreateURLActionWithConditions bdCreateURLActionWithConditions = new CreateURLActionWithConditions();
-            bdCreateURLActionWithConditions.createActionWithConditions();
+            //bdCreateURLActionWithConditions.createActionWithConditions();
 
 
             /*Get Checkin activities*/
             GetCheckinActivities bdCheckinActivity = new GetCheckinActivities();
-            bdCheckinActivity.getAllCheckInActivitesByZone();
-            bdCheckinActivity.getCheckInActivitiesByZoneAndDateRange();
+            //bdCheckinActivity.getAllCheckInActivitesByZone();
+            //bdCheckinActivity.getCheckInActivitiesByZoneAndDateRange();
 
             /*Create a zone, fences, actions and conditions in one call*/
             FenceBulkLoader fenceBulkLoader = new FenceBulkLoader();

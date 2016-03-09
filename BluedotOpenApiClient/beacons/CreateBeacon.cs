@@ -35,7 +35,7 @@ namespace BluedotPublicApiClient.beacon
             HttpContent jsonBeaconContent = new StringContent(getJsonBeacon());
             jsonBeaconContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            HttpResponseMessage serverResponse = httpRestClient.PostAsync(new Uri(bdRestUrl), jsonBeaconContent).Result;
+            //HttpResponseMessage serverResponse = httpRestClient.PostAsync(new Uri(bdRestUrl), jsonBeaconContent).Result;
             if (serverResponse.IsSuccessStatusCode)
             {
                 var result = serverResponse.Content.ReadAsStringAsync().Result;
@@ -58,15 +58,16 @@ namespace BluedotPublicApiClient.beacon
              "}," +
              "\"content\": {" +
                          "\"beacon\": {" +
-                                 "\"name\": \"Beacon-15-test2 \"," +
-                                 "\"proximityUuid\": \"f7826da6-4fa2-4e98-8024-bc5b71e0893e\"," +
+                                 "\"name\": \"Bluedot building \"," +
+                                 "\"proximityUUUID\": \"f7826da6-4fa2-4e98-8024-bc5b71e0893e\"," +
                                  "\"longitude\": \"123.34455\"," +
                                  "\"latitude\": \"47.777888\"," +
+                                 "\"type\": \"Both\"," +
                                  "\"major\": 12," +
                                  "\"minor\": 13," +
                                  "\"txPower\": -77," +
-                                 "\"macAddress\": \"01:17:C5:31:84:21\"" +
-                                  "\"description\": \"Sanfrancisco office front door\"" +
+                                 "\"macAddress\": \"01:17:C5:31:84:21\"," +
+                                  "\"description\": \"Sample Description\"," +
                          "}" +
                   "}" +
           "}";

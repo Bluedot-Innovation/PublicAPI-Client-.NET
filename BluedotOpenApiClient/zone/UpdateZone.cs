@@ -47,7 +47,7 @@ namespace BluedotPublicApiClient.zoneclient
         /*Return JSON for a Zone. Time values have a format of HH:MM and the period value has to be one of {am/pm}*/
         private static String getJsonZone()
         {
-            return "{" +
+            return "{" + 
              "\"security\": {" +
                         "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
                         "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
@@ -57,6 +57,7 @@ namespace BluedotPublicApiClient.zoneclient
                     "\"zoneId\":" + "\"" + bdZoneId + "\"," +
                     "\"zoneName\": \"Congestion Zone - Updated\"," +
                     "\"minimumRetriggerTime\": \"11:11\"," +
+                    "\"enableCheckOut\": false," +
                     "\"timeActive\" : {" +
                         "\"from\": {" +
                             "\"time\": \"06:00\"," +

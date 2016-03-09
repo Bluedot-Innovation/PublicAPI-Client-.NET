@@ -60,6 +60,7 @@ namespace BluedotPublicApiClient.zoneclient
                  "\"zone\": {" +
                     "\"zoneName\": \"Congestion Zone\"," +
                     "\"minimumRetriggerTime\": \"00:01\"," +
+                    "\"enableCheckOut\":true,"+
                     "\"timeActive\" : {" +
                         "\"from\": {" +
                             "\"time\": \"12:01\"," +
