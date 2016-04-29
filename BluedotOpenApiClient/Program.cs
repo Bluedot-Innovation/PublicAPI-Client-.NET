@@ -75,37 +75,36 @@ namespace BluedotPublicApiClient
 
             /*Update an existing geo-fence*/
             //BDUpdateFenceClient updateFenceClient = new BDUpdateFenceClient();
-           // updateFenceClient.updateFence();
+            //updateFenceClient.updateFence();
 
 
             CreateMessageAction messageActionClient = new CreateMessageAction();
             //messageActionClient.create();
 
             CreateURLAction urlActionClient = new CreateURLAction();
-           // urlActionClient.create();
+            //urlActionClient.create();
 
             CreateVibrationAction bdVibrationActionClient = new CreateVibrationAction();
-          //  bdVibrationActionClient.create();
+            //bdVibrationActionClient.create();
 
             CreateSoundAction bdSoundActionClient = new CreateSoundAction();
-        //    bdSoundActionClient.create();
+            //bdSoundActionClient.create();
 
             /*Add conditions to actions*/
             CreateAllActionsWithAllConditions bdConditionsClient = new CreateAllActionsWithAllConditions();
-      //      bdConditionsClient.addConditionsToMessageAction();
-
+            //bdConditionsClient.addConditionsToMessageAction();
 
             CreateMessageActionWithConditions bdCreateMessageActionWithConditions = new CreateMessageActionWithConditions();
-    //        bdCreateMessageActionWithConditions.createActionWithConditions();
+            //bdCreateMessageActionWithConditions.createActionWithConditions();
             
             CreateApplicationActionWithConditions bdCreateApplicationActionWithConditions = new CreateApplicationActionWithConditions();
-  //          bdCreateApplicationActionWithConditions.createActionWithConditions();
+            //bdCreateApplicationActionWithConditions.createActionWithConditions();
 
             CreateSoundActionWithConditions bdCreateSoundActionWithConditions = new CreateSoundActionWithConditions();
-//            bdCreateSoundActionWithConditions.createActionWithConditions();
+            //bdCreateSoundActionWithConditions.createActionWithConditions();
 
             CreateApplicationActionWithConditions bdCreateApplicationActionWithCondtions = new CreateApplicationActionWithConditions();
-//            bdCreateApplicationActionWithCondtions.createActionWithConditions();
+            //bdCreateApplicationActionWithCondtions.createActionWithConditions();
 
             CreateVibrationActionWithConditions bdCreateVibrationActionWithConditions = new CreateVibrationActionWithConditions();
             //bdCreateVibrationActionWithConditions.createActionWithConditions();
@@ -113,16 +112,10 @@ namespace BluedotPublicApiClient
             CreateURLActionWithConditions bdCreateURLActionWithConditions = new CreateURLActionWithConditions();
             //bdCreateURLActionWithConditions.createActionWithConditions();
 
-
             /*Get Checkin activities*/
             GetCheckinActivities bdCheckinActivity = new GetCheckinActivities();
             //bdCheckinActivity.getAllCheckInActivitesByZone();
             //bdCheckinActivity.getCheckInActivitiesByZoneAndDateRange();
-
-            /*Create a zone, fences, actions and conditions in one call*/
-            FenceBulkLoader fenceBulkLoader = new FenceBulkLoader();
-            //fenceBulkLoader.loadFences();
-
 
         }
     }

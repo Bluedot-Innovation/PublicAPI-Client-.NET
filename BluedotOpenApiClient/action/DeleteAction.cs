@@ -22,11 +22,12 @@ namespace BluedotPublicApiClient.actionclient
         public void delete() 
         {
             String bdCustomerApiKey = "835d9460-7b91-11e4-bcb7-a0481cdc3311";
+            String bdApplicationApiKey = "e9224a1b-7f10-4033-82f7-c4d1dfc91825"; //This apiKey is generated when you create an application
             String bdZoneId         = "3846fa1d-11f7-4044-8eab-0977f90d987e";
             String actionId         = "fe6c357a-5273-4f95-8980-2e37ef2dc115";
             String bdRestBaseUrl    = "https://api.bluedotinnovation.com/1/action/delete?";
 
-            String bdRestUrl        = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&zoneId=" + bdZoneId+ "&actionId=" + actionId;
+            String bdRestUrl        = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&apiKey" + bdApplicationApiKey + "&zoneId=" + bdZoneId+ "&actionId=" + actionId;
             HttpClient httpRestClient = new HttpClient();
 
             HttpResponseMessage serverResponse = httpRestClient.DeleteAsync(new Uri(bdRestUrl)).Result;

@@ -9,6 +9,11 @@ using System.Net;
 using System.IO;
 using System.Threading.Tasks;
 
+/**
+ * @author Bluedot Innovation
+ * Create Vibration Action c# client demonstrates adding an vibration action to an existing the customer's zone using .net http web api library
+ */
+
 namespace BluedotPublicApiClient.actionclient
 {
     public class CreateVibrationAction
@@ -47,7 +52,7 @@ namespace BluedotPublicApiClient.actionclient
         /*JSON Format for a Vibration action*/
         private static String getJsonVibrationAction()
         {
-            String urlActionJson =
+            String vibrationActionJson =
                  "{" +
                     "\"security\": {" +
                         "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
@@ -66,7 +71,7 @@ namespace BluedotPublicApiClient.actionclient
                         "}" +
                     "}" +
                 "}";
-            return urlActionJson;
+            return vibrationActionJson;
         }
 
     }

@@ -21,11 +21,12 @@ namespace BluedotPublicApiClient.zoneclient
 
         public void delete()
         {
-            String bdCustomerApiKey = "835d9460-7b91-11e4-bcb7-a0481cdc3311"; /*This is available on the Dashboard via edit profile tab*/
-            String bdZoneId         = "0302e8d2-6618-410f-a577-3b0f14a6c79b"; /*This can be extracted via the getAllZones api or the Web Dashboard*/
-            String bdRestBaseUrl    = "https://api.bluedotinnovation.com/1/zone/delete?";
+            String bdCustomerApiKey     = "835d9460-7b91-11e4-bcb7-a0481cdc3311"; //This is available on the Dashboard via edit profile tab
+            String bdApplicationApiKey  = "d3161e80-38d1-11e4-b039-bc305bf60831"; //This apiKey is generated when you create an application
+            String bdZoneId             = "0302e8d2-6618-410f-a577-3b0f14a6c79b"; //This can be extracted via the getAllZones api or the Web Dashboard
+            String bdRestBaseUrl        = "https://api.bluedotinnovation.com/1/zone/delete?";
 
-            String bdRestUrl        = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&zoneId=" + bdZoneId;
+            String bdRestUrl        = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&apiKey=" + bdApplicationApiKey + "&zoneId=" + bdZoneId;
             HttpClient httpRestClient = new HttpClient();
 
             HttpResponseMessage serverResponse = httpRestClient.DeleteAsync(new Uri(bdRestUrl)).Result;

@@ -9,6 +9,11 @@ using System.Net;
 using System.IO;
 using System.Threading.Tasks;
 
+/**
+ * @author Bluedot Innovation
+ * Create Sound Action c# client demonstrates adding an Sound action with conditions to an existing the customer's zone using .net http web api library
+ */
+
 namespace BluedotPublicApiClient.actionclient
 {
     public class CreateSoundActionWithConditions
