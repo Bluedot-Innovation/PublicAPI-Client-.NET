@@ -11,6 +11,7 @@
     <AssemblyName>BluedotOpenApiClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -170,9 +170,9 @@
     <Compile Include="beacons\AddBeaconToZone.cs" />
     <Compile Include="beacons\CreateBeacon.cs" />
     <Compile Include="beacons\DeleteBeacon.cs" />
-    <Compile Include="beacons\GetBeacons.cs" />
     <Compile Include="beacons\UpdateBeacon.cs" />
     <Compile Include="checkin\GetCheckinActivities.cs" />
+    <Compile Include="fence\AddMultipleFences.cs" />
     <Compile Include="fence\DeleteFence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,7 +196,6 @@
     <Compile Include="zone\DeleteZone.cs" />
     <Compile Include="zone\UpdateZone.cs" />
     <Compile Include="zone\GetAllZones.cs" />
-    <Compile Include="fence\FenceBulkLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
