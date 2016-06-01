@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
  * @author Bluedot Innovation
@@ -22,7 +21,6 @@ namespace BluedotPublicApiClient.actionclient
         private static String bdApplicationApiKey = "e9224a1b-7f10-4033-82f7-c4d1dfc91825"; //This apiKey is generated when you create an application
         private static String bdZoneId            = "71e66fca-aadc-48b2-bbd6-2bdc46572079"; //This is the id of the zone being updated. This can be fetched by calling zones/getAll API
         private static String bdRestUrl           = "https://api.bluedotinnovation.com/1/actions";
-
 
         public void create()
         {

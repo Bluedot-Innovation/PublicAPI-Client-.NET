@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace BluedotPublicApiClient.beacon
 {
@@ -19,10 +18,8 @@ namespace BluedotPublicApiClient.beacon
         private static String beaconId = "b7db6f18-6557-4903-b0a7-b35b96d54fec";
         private static String bdRestUrl = "https://api.bluedotinnovation.com/1/beacons?";
 
-
         public void delete()
         {
-
             bdRestUrl = bdRestUrl + "customerApiKey=" + bdCustomerApiKey + "&applicationApiKey=" + bdApplicationApiKey + "&beaconId=" + beaconId;
             HttpClient httpRestClient = new HttpClient();
 

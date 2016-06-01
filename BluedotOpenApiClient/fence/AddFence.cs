@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
 * @author Bluedot Innovation
@@ -49,7 +48,6 @@ namespace BluedotPublicApiClient.zoneclient
             }
         }
 
-
         /*Circular fence requires a centerpoint and radius*/
         private static String getJsonCircularFence()
         {
@@ -77,9 +75,8 @@ namespace BluedotPublicApiClient.zoneclient
                      "}" +
                  "}" +
              "}" +
-          "}";
-
-            return circularFenceJson;
+           "}";
+           return circularFenceJson;
         }
 
         /*Bounding box requires north east and south west points*/
@@ -113,7 +110,6 @@ namespace BluedotPublicApiClient.zoneclient
                     "}" +
                  "}" +
                "}";
-
             return boundingBoxFenceJson;
         }
 
@@ -185,7 +181,6 @@ namespace BluedotPublicApiClient.zoneclient
                             "}" +
                          "}" +
                     "}";
-
             return polygonalFenceJson;
         }
 
@@ -230,7 +225,6 @@ namespace BluedotPublicApiClient.zoneclient
                             "}" +
                          "}" +
                     "}";
-
             return geolineFenceJson;
         }
     }

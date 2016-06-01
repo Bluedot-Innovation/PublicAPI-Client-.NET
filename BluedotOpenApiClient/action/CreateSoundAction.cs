@@ -7,13 +7,11 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
  * @author Bluedot Innovation
  * Create Sound Action c# client demonstrates adding an sound action to an existing the customer's zone using .net http web api library
  */
-
 
 namespace BluedotPublicApiClient.actionclient
 {
@@ -49,8 +47,6 @@ namespace BluedotPublicApiClient.actionclient
             }
         }
 
-
-
         /*JSON Format for a Vibration action*/
         private static String getJsonSoundAction()
         {
@@ -75,6 +71,5 @@ namespace BluedotPublicApiClient.actionclient
                 "}";
             return soundActionJson;
         }
-
     }
 }

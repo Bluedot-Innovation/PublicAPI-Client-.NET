@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
  * @author Bluedot Innovation
@@ -48,7 +47,6 @@ namespace BluedotPublicApiClient.actionclient
             }
         }
 
-
         /*JSON Format for a Vibration action*/
         private static String getJsonVibrationAction()
         {
@@ -73,6 +71,5 @@ namespace BluedotPublicApiClient.actionclient
                 "}";
             return vibrationActionJson;
         }
-
     }
 }

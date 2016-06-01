@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
  * @author Bluedot Innovation
@@ -27,7 +26,6 @@ namespace BluedotPublicApiClient.actionclient
         {
             postToService(getJsonVibrationActionWithConditions());
         }
-
 
         private void postToService(String json)
         {
@@ -54,35 +52,35 @@ namespace BluedotPublicApiClient.actionclient
         {
             String action =
             "{" +
-            "\"security\": {" +
-                 "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
-                  "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-            "}," +
-            "\"content\": {" +
-                "\"zone\": {" +
-                    "\"zoneId\":" + "\"" + bdZoneId + "\"," +
-                    "\"actions\": {" +
-                        "\"vibrationActions\": [" +
-                            "{" +
-                                "\"name\" : \"A vibration action\"," +
-                                "\"conditions\": {" +
-                                   "\"timeActive\": [{" +
-                                            "\"from\": {" +
-                                                "\"time\": \"09:00\"," +
-                                                "\"period\": \"am\" " +
-                                            "}," +
-                                            "\"to\": {" +
-                                                "\"time\": \"05:00\"," +
-                                                "\"period\": \"pm\" " +
-                                            "}" +
-                                        "}]" +
+                "\"security\": {" +
+                     "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
+                      "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
+                "}," +
+                "\"content\": {" +
+                    "\"zone\": {" +
+                        "\"zoneId\":" + "\"" + bdZoneId + "\"," +
+                        "\"actions\": {" +
+                            "\"vibrationActions\": [" +
+                                "{" +
+                                    "\"name\" : \"A vibration action\"," +
+                                    "\"conditions\": {" +
+                                       "\"timeActive\": [{" +
+                                                "\"from\": {" +
+                                                    "\"time\": \"09:00\"," +
+                                                    "\"period\": \"am\" " +
+                                                "}," +
+                                                "\"to\": {" +
+                                                    "\"time\": \"05:00\"," +
+                                                    "\"period\": \"pm\" " +
+                                                "}" +
+                                            "}]" +
+                                    "}" +
                                 "}" +
-                            "}" +
-                        "]" +
+                            "]" +
+                        "}" +
                     "}" +
                 "}" +
-            "}" +
-        "}";
+            "}";
             return action;
         }
     }

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
 * @author Bluedot Innovation

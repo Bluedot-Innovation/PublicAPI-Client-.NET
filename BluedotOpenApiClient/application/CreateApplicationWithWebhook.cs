@@ -16,7 +16,7 @@ using System.IO;
 
 namespace BluedotPublicApiClient.applicationclient
 {
-    public class CreateApplication
+    public class CreateApplicationWithWebhook
     {
         public void create()
         {
@@ -25,22 +25,31 @@ namespace BluedotPublicApiClient.applicationclient
 
             String application =
                "{" +
-                 "\"security\": {" +
-                /*
-                  customerApiKey is generated when customer registers first time. It is also available
-                  on the PointAccess interface in the Edit Profile section.
-                */
+                    "\"security\": {" +
+                    /*
+                      customerApiKey is generated when customer registers first time. It is also available
+                      on the PointAccess interface in the Edit Profile section.
+                    */
                          "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-               "}," +
-               "\"content\": { " +
-                   "\"application\" : {" +
+                   "}," +
+                   "\"content\": { " +
+                       "\"application\" : {" +
                             "\"name\" : \"A Bluedot Application\"," +
                             "\"packageName\": \"com.bluedotinnovation.testapplication\"," +
                             /* Time in Hour:Minute format.*/
-                             "\"nextRuleUpdateIntervalFormatted\": \"00:07\"" +
+                            "\"nextRuleUpdateIntervalFormatted\": \"00:07\"," +
+                            "\"webhook\": {" +
+                                /*The URL of the server where the webhooks will be received.*/
+                                "\"url\": \"https://api.testapplication.com/webhook/checkinreceiver\"," + 
+                                "\"enabled\" : true," +
+                                /*The Security Token Key is the name of the field to be sent in the POST request header.*/
+                                "\"securityTokenKey\" : \"authToken\"," +
+                                /*The Security Token Value field is value of the Security Token Key field sent in the POST request header.*/
+                                "\"securityTokenValue\" : \"f2f7a58c-f0d5-498c-9bad-acbc89923dc5\"" + 
+                            "}" +
                         "}" +
-                   "}" +
-             "}";
+                    "}" +
+                "}";
 
             HttpClient httpRestClient = new HttpClient();
             httpRestClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

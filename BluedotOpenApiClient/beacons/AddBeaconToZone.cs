@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
-using System.Threading.Tasks;
  
 /**
  * @author Bluedot Innovation
@@ -53,22 +52,22 @@ namespace BluedotPublicApiClient.beacon
         private static String getjsonAddBeacontoZone()
         {
             return "{" +
-             "\"security\": {" +
-                        "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
-                        "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-            "}," +
-           "\"content\": {" +
-                 "\"zone\": {" +
-                    "\"zoneId\":" + "\"" + bdZoneId + "\" "+
-                    "\"beacons\": [" +
-				            	"{" +
-					               "\"beaconId\": " +" \"" + bdBeaconId + "\" " +
-					    		   "\"proximity\": 1" +
-					    		"}"+
-					    	"]"+
-				        "}"+
+                 "\"security\": {" +
+                            "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
+                            "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
+                "}," +
+               "\"content\": {" +
+                     "\"zone\": {" +
+                        "\"zoneId\":" + "\"" + bdZoneId + "\" "+
+                        "\"beacons\": [" +
+				            "{" +
+					            "\"beaconId\": " +" \"" + bdBeaconId + "\" " +
+					    	    "\"proximity\": 1" +
+					        "}"+
+					    "]"+
 				    "}"+
-			 "}";
+			    "}"+
+		    "}";
         }
     }
 }

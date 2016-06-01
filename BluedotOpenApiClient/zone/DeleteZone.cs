@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
 * @author Bluedot Innovation
@@ -18,7 +17,6 @@ namespace BluedotPublicApiClient.zoneclient
 {
     class DeleteZone
     {
-
         public void delete()
         {
             String bdCustomerApiKey     = "835d9460-7b91-11e4-bcb7-a0481cdc3311"; //This is available on the Dashboard via edit profile tab

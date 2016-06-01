@@ -7,12 +7,11 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
 /**
  * @author Bluedot Innovation
- * Get Applications java client demonstrates listing or all applications for a given customer.
+ * Get Applications .NET client demonstrates listing or all applications for a given customer.
  */
 namespace BluedotPublicApiClient.applicationclient
 {
@@ -20,7 +19,7 @@ namespace BluedotPublicApiClient.applicationclient
     {
         private static String apiKey         = "b817bb5d-4b58-4f41-be5f-528fd4c7c95c";
         private static String customerApiKey = "ca4c8d11-6942-11e4-ba4b-a0481cdc3311";
-        String bdRestUrl                     = "https://api.bluedotinnovation.com/1/application/getAll?customerApiKey=" + customerApiKey + "&apiKey=" + apiKey 
+        String bdRestUrl                     = "https://api.bluedotinnovation.com/1/application/getAll?customerApiKey=" + customerApiKey + "&apiKey=" + apiKey;
 
         public void getAllApplicationsForCustomer()
         {

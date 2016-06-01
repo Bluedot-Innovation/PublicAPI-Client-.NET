@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
  * @author Bluedot Innovation
@@ -27,7 +26,6 @@ namespace BluedotPublicApiClient.actionclient
         {
             postToService(getJsonMessageActionWithConditions());
         }
-
 
         private void postToService(String json)
         {
@@ -53,37 +51,36 @@ namespace BluedotPublicApiClient.actionclient
         private static String getJsonMessageActionWithConditions()
         {
             String action =
-            "{" +
-            "\"security\": {" +
-                 "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
-                  "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-            "}," +
-            "\"content\": {" +
-                "\"zone\": {" +
-                    "\"zoneId\":" + "\"" + bdZoneId + "\"," +
-                    "\"actions\": {" +
-                        "\"messageActions\": [" +
-                            "{" +
-                                "\"name\" : \"You are walking\"," +
-                                "\"title\" : \"You are walking\"," +
-                                "\"message\" : \"You are walking\"," +
-                                "\"conditions\": {" +
-                                    "\"percentageCrossed\":" +
-                                    "[" +
-                                       "{" +
-                                           "\"percentage\": 100," +
-                                           "\"timeoutPeriod\": \"00:05\"" +
-                                        "}" +
-                                   "]" +
+                "{" +
+                "\"security\": {" +
+                     "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
+                      "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
+                "}," +
+                "\"content\": {" +
+                    "\"zone\": {" +
+                        "\"zoneId\":" + "\"" + bdZoneId + "\"," +
+                        "\"actions\": {" +
+                            "\"messageActions\": [" +
+                                "{" +
+                                    "\"name\" : \"You are walking\"," +
+                                    "\"title\" : \"You are walking\"," +
+                                    "\"message\" : \"You are walking\"," +
+                                    "\"conditions\": {" +
+                                        "\"percentageCrossed\":" +
+                                        "[" +
+                                           "{" +
+                                               "\"percentage\": 100," +
+                                               "\"timeoutPeriod\": \"00:05\"" +
+                                            "}" +
+                                       "]" +
+                                    "}" +
                                 "}" +
-                            "}" +
-                        "]" +
+                            "]" +
+                        "}" +
                     "}" +
                 "}" +
-            "}" +
-        "}";
+            "}";
             return action;
         }
-
     }
 }

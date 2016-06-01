@@ -163,8 +163,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="action\DeleteAction.cs" />
+    <Compile Include="application\CreateApplicationWithWebhook.cs" />
     <Compile Include="application\CreateApplication.cs" />
     <Compile Include="application\DeleteApplication.cs" />
+    <Compile Include="application\UpdateApplicationWithWebhook.cs" />
     <Compile Include="application\UpdateApplication.cs" />
     <Compile Include="application\GetAllApplications.cs" />
     <Compile Include="beacons\AddBeaconToZone.cs" />
@@ -177,8 +179,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="action\CreateAllActions.cs" />
-    <Compile Include="action\CreateApplicationAction.cs" />
-    <Compile Include="action\CreateApplicationActionWithConditions.cs" />
+    <Compile Include="action\CreateCustomAction.cs" />
+    <Compile Include="action\CreateCustomActionWithConditions.cs" />
     <Compile Include="action\CreateMessageAction.cs" />
     <Compile Include="action\CreateMessageActionWithConditions.cs" />
     <Compile Include="action\CreateSoundAction.cs" />

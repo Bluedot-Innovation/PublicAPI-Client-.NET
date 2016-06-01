@@ -17,7 +17,7 @@ using System.IO;
 
 namespace BluedotPublicApiClient.applicationclient
 {
-    public class UpdateApplication
+    public class UpdateApplicationWithWebhook
     {
         public void update()
         {
@@ -36,13 +36,22 @@ namespace BluedotPublicApiClient.applicationclient
                "}," +
                "\"content\": { " +
                    "\"application\" : {" +
-                        "\"applicationId\":" + "\"" + bdApplicationId + "\"," + /*This is the id of the application as opposed to the api key. This is returned when the application/getAll is called*/
-                        "\"name\" : \"A Bluedot Application-Update\"," +
-                        "\"packageName\": \"com.bluedotinnovation.testapplication\"," +
-                        /* Time in Hour:Minute format.*/
-                        "\"nextRuleUpdateIntervalFormatted\": \"00:10\"" +
+                             "\"applicationId\":" + "\"" + bdApplicationId + "\"," + /*This is the id of the application as opposed to the api key. This is returned when the application/getAll is called*/
+                             "\"name\" : \"A Bluedot Application-Update\"," +
+                             "\"packageName\": \"com.bluedotinnovation.testapplication\"," +
+                             /* Time in Hour:Minute format.*/
+                             "\"nextRuleUpdateIntervalFormatted\": \"00:10\"," +
+                             "\"webhook\": {" +
+                                /*The URL of the server where the webhooks will be received.*/
+                                "\"url\": \"https://api.testapplication.com/webhook/checkinreceiver\"," +
+                                "\"enabled\" : true," +
+                                /*The Security Token Key is the name of the field to be sent in the POST request header.*/
+                                "\"securityTokenKey\" : \"authToken\"," +
+                                /*The Security Token Value field is value of the Security Token Key field sent in the POST request header.*/
+                                "\"securityTokenValue\" : \"f2f7a58c-f0d5-498c-9bad-acbc89923dc5\"" +
+                            "}" +
+                        "}" +
                    "}" +
-                "}" +
              "}";
 
             HttpClient httpRestClient = new HttpClient();

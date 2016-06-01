@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
  * @author Bluedot Innovation
@@ -28,7 +27,6 @@ namespace BluedotPublicApiClient.actionclient
         {
             postToService(getJsonURLActionWithConditions());
         }
-
 
         private void postToService(String json)
         {
@@ -85,7 +83,6 @@ namespace BluedotPublicApiClient.actionclient
                         "}" +
                     "}" +
                 "}";
-
             return urlActionWithCondtionsJson;
         }
     }

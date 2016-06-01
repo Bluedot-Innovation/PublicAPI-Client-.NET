@@ -7,7 +7,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
  * @author Bluedot Innovation
@@ -43,86 +42,15 @@ namespace BluedotPublicApiClient.actionclient
                 Console.WriteLine("{0} ({1})", (int) serverResponse.StatusCode, serverResponse.Content.ReadAsStringAsync().Result);
             }
         }
-        public void addURLAction()
+        public void addAllAction()
         {
-            postToService(getJsonUrlAction());
-        }
-
-        public void addMessageAction()
-        {
-            postToService(getJsonMessageAction());
-        }
-
-        public void addVibrationAction()
-        {
-            postToService(getJsonVibrationAction());
-        }
-
-        public void addApplicationAction()
-        {
-            postToService(getJsonApplicationAction());
-        }
-
-        public void addSoundAction()
-        {
-
+            postToService(getJsonAllAction());
         }
 
         /*JSON Format for a URL action*/
-        private static String getJsonUrlAction()
+        private static String getJsonAllAction()
         {
-            String urlActionJson =
-                 "{" +
-                    "\"security\": {" +
-                        "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
-                        "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-                    "}," +
-                    "\"content\": {" +
-                        "\"zone\": {" +
-                            "\"zoneId\":" + "\"" + bdZoneId + "\"," +
-                            "\"actions\": {" +
-                                "\"urlActions\": [" +
-                                    "{" +
-                                        "\"name\": \"Bluedot URL\"," +
-                                        "\"url\": \"http://www.bluedotinnovation.com\"" +
-                                    "}" +
-                                "]" +
-                            "}" +
-                        "}" +
-                    "}" +
-                "}";
-            return urlActionJson;
-        }
-
-        /*JSON Format for a Vibration action*/
-        private static String getJsonVibrationAction()
-        {
-            String urlActionJson =
-                 "{" +
-                    "\"security\": {" +
-                        "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
-                        "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-                    "}," +
-                    "\"content\": {" +
-                        "\"zone\": {" +
-                            "\"zoneId\":" + "\"" + bdZoneId + "\"," +
-                            "\"actions\": {" +
-                                "\"vibrationActions\": [" +
-                                    "{" +
-                                        "\"name\": \"A vibration action\"" +
-                                    "}" +
-                                "]" +
-                            "}" +
-                        "}" +
-                    "}" +
-                "}";
-            return urlActionJson;
-        }
-
-        /*JSON Format for an application action*/
-        private static String getJsonApplicationAction()
-        {
-            String applicationActionJson =
+            String allActionJson =
                  "{" +
                     "\"security\": {" +
                         "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
@@ -136,41 +64,36 @@ namespace BluedotPublicApiClient.actionclient
                                     "{" +
                                         "\"name\": \"A Custom Application action\"" +
                                     "}" +
-                                "]" +
-                            "}" +
-                        "}" +
-                    "}" +
-                "}";
-            return applicationActionJson;
-        }
-
-        /*JSON Format for a Message action*/
-        private static String getJsonMessageAction()
-        {
-            String messageActionJson =
-                 "{" +
-                    "\"security\": {" +
-                        "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
-                        "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-                    "}," +
-                    "\"content\": {" +
-                        "\"zone\": {" +
-                            "\"zoneId\":" + "\"" + bdZoneId + "\"," +
-                            "\"actions\": {" +
+                                "]," +
+                                "\"soundActions\": [" +
+                                    "{" +
+                                        "\"name\": \"A Sound action\"" +
+                                    "}" +
+                                "]," +
+                                "\"vibrationActions\": [" +
+                                    "{" +
+                                        "\"name\": \"A Vibration action\"" +
+                                    "}" +
+                                "]," +
+                                "\"urlActions\": [" +
+                                    "{" +
+                                        "\"name\": \"Bluedot URL\"," +
+                                        "\"url\": \"http://www.bluedotinnovation.com\"" +
+                                    "}" +
+                                "]," +
                                 "\"messageActions\": [" +
                                     "{" +
-                                        "\"name\": \"Welcome to MCG\"," +
-                                        "\"title\": \"MCG Welcome Message\"," +
-                                        "\"message\": \"Welcome to MCG\"" +
+                                        "\"name\": \"Welcome to Bluedot Innovation\"," +
+                                        "\"title\": \"Welcome to Bluedot Innovation Message\"," +
+                                        "\"message\": \"Welcome to Bluedot Innovation.\"" +
                                     "}" +
                                 "]" +
                             "}" +
                         "}" +
                     "}" +
                 "}";
-            return messageActionJson;
+            return allActionJson;
         }
-
     }
 
 }

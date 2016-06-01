@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
-using System.Threading.Tasks;
 
 /**
 * @author Bluedot Innovation
@@ -27,7 +26,7 @@ namespace BluedotPublicApiClient.zoneclient
             
             String bdRestBaseUrl        = "https://api.bluedotinnovation.com/1/fence/delete?";
 
-            String bdRestUrl = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&zoneId=" + bdZoneId + "&fenceId=" + fenceId;
+            String bdRestUrl = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&apiKey=" + bdApplicationApiKey + "&zoneId=" + bdZoneId + "&fenceId=" + fenceId;
             HttpClient httpRestClient = new HttpClient();
 
             HttpResponseMessage serverResponse = httpRestClient.DeleteAsync(new Uri(bdRestUrl)).Result;

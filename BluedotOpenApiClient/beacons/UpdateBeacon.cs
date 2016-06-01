@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
-using System.Threading.Tasks;
-
 
 /**
 * @author Bluedot Innovation
@@ -61,18 +59,18 @@ namespace BluedotPublicApiClient.beacon
              "}," +
              "\"content\": {" +
                    "\"beacon\": {" +
-                             "\"beaconId\":" + "\"" + bdBeaconId + "\" " +
-                             "\"name\": \"Beacon-15-test2\"," +
-                             "\"proximityUUID\": \"f7826da6-4fa2-4e98-8024-bc5b71e0893e\"," +
-                             "\"longitude\": \"123.34455\"," +
-                             "\"latitude\": \"47.777888\"," +
-                             "\"major\": 12," +
-                             "\"minor\": 14," +
-                             "\"macAddress\":\"01:17:C5:31:84:21\"," +
-                             "\"txPower\": -77," +
-                             "\"description\": \"Sample description\"," +
-                         "}" +
-                  "}" +
+                        "\"beaconId\":" + "\"" + bdBeaconId + "\" " +
+                        "\"name\": \"Beacon-15-test2\"," +
+                        "\"proximityUUID\": \"f7826da6-4fa2-4e98-8024-bc5b71e0893e\"," +
+                        "\"longitude\": \"123.34455\"," +
+                        "\"latitude\": \"47.777888\"," +
+                        "\"major\": 12," +
+                        "\"minor\": 14," +
+                        "\"macAddress\":\"01:17:C5:31:84:21\"," +
+                        "\"txPower\": -77," +
+                        "\"description\": \"Sample description\"" +
+                    "}" +
+                "}" +
           "}";
 
         }
