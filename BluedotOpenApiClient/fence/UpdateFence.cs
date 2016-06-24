@@ -7,16 +7,18 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 /**
 * @author Bluedot Innovation
-* Add fence c# client demonstrates updating existing geo fences within a zone using net http web api library
+* Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+* Update fence client demonstrates updating existing geo fences within a zone using .net http web api library
 * Circular fence
 * Bounding Box
 * Polygonal
 */
 
-namespace BluedotPublicApiClient.zoneclient
+namespace BluedotPublicApiClient.fenceclient
 {
     public class BDUpdateFenceClient
     {
@@ -28,11 +30,18 @@ namespace BluedotPublicApiClient.zoneclient
         private static String bdPolygonalFenceId   = "b4024ed6-7a28-4335-ba51-45df58459e17"; //This is the id of the fence being updated. This can be fetched by calling zones/get API
         private static String bdGeolineFenceId     = "b4024ed6-7a28-4335-ba51-45df58459e17"; //This is the id of the fence being updated. This can be fetched by calling zones/get API
 
-        private static String bdRestUrl = "https://api.bluedotinnovation.com/1/fence/update";
+        private static String bdRestUrl = "https://api.bluedotinnovation.com/1/fences";
         
         public void updateFence()
         {
-            HttpClient httpRestClient = new HttpClient();
+            WebRequestHandler handler = new WebRequestHandler();
+            X509Certificate2 certificate = new X509Certificate2();
+            handler.ClientCertificates.Add(certificate);
+            HttpClient httpRestClient = new HttpClient(handler);
+
+            //specify to use TLS 1.2 as default connection
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
             httpRestClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             HttpContent jsonFenceContent         = new StringContent(getJsonCircularFence());

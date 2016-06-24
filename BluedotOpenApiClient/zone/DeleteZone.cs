@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 /**
 * @author Bluedot Innovation
+* Copyright (c) 2016 Bluedot Innovation. All rights reserved.
 * DeleteZone client demonstrates deleting an zone using the id provided, through http web api library
 */
 namespace BluedotPublicApiClient.zoneclient
@@ -19,13 +21,19 @@ namespace BluedotPublicApiClient.zoneclient
     {
         public void delete()
         {
-            String bdCustomerApiKey     = "835d9460-7b91-11e4-bcb7-a0481cdc3311"; //This is available on the Dashboard via edit profile tab
-            String bdApplicationApiKey  = "d3161e80-38d1-11e4-b039-bc305bf60831"; //This apiKey is generated when you create an application
-            String bdZoneId             = "0302e8d2-6618-410f-a577-3b0f14a6c79b"; //This can be extracted via the getAllZones api or the Web Dashboard
-            String bdRestBaseUrl        = "https://api.bluedotinnovation.com/1/zone/delete?";
+            String bdCustomerApiKey     = "76e1ae30-c616-11e5-a7c0-b8ca3a6b879d"; //This is available on the Dashboard via edit profile tab
+            String bdApplicationApiKey  = "dee11930-ebff-11e5-8e27-bc305bf60831"; //This apiKey is generated when you create an application
+            String bdZoneId             = "720f2f5d-7057-4668-a546-542abc4f2128"; //This can be extracted via the GET Zones api or the Web Dashboard
+            String bdRestBaseUrl        = "https://api.bluedotinnovation.com/1/zones?";
 
             String bdRestUrl        = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&apiKey=" + bdApplicationApiKey + "&zoneId=" + bdZoneId;
-            HttpClient httpRestClient = new HttpClient();
+            WebRequestHandler handler = new WebRequestHandler();
+            X509Certificate2 certificate = new X509Certificate2();
+            handler.ClientCertificates.Add(certificate);
+            HttpClient httpRestClient = new HttpClient(handler);
+
+            //specify to use TLS 1.2 as default connection
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
 
             HttpResponseMessage serverResponse = httpRestClient.DeleteAsync(new Uri(bdRestUrl)).Result;
             if (serverResponse.IsSuccessStatusCode)

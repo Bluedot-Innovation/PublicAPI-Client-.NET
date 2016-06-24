@@ -8,16 +8,18 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 /**
 * @author Bluedot Innovation
-* Add beacon c# client demonstrates adding a beacon to to an existing the customer's account using net http web api library
+* Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+* Add beacon client demonstrates adding a beacon to to an existing the customer's account using net http web api library
 * 
 */
 
-namespace BluedotPublicApiClient.beacon
+namespace BluedotPublicApiClient.beaconclient
 {
-    public class BDCreateBeacon
+    public class BDAddBeacon
     {
 
         private static String bdApplicationApiKey = "dc99ae20-9192-11e5-8721-0646bf53d23f"; //This apiKey is generated when you create an application
@@ -27,7 +29,14 @@ namespace BluedotPublicApiClient.beacon
 
         public void create()
         {
-            HttpClient httpRestClient = new HttpClient();
+            WebRequestHandler handler = new WebRequestHandler();
+            X509Certificate2 certificate = new X509Certificate2();
+            handler.ClientCertificates.Add(certificate);
+            HttpClient httpRestClient = new HttpClient(handler);
+
+            //specify to use TLS 1.2 as default connection
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
             httpRestClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             HttpContent jsonBeaconContent = new StringContent(getJsonBeacon());

@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 /**
 * @author Bluedot Innovation
-* DeleteFence client demonstrates deleting a fence using the id provided, through http web api library
+* Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+* Delete Fence client demonstrates deleting a fence using the id provided, through http web api library
 */
-namespace BluedotPublicApiClient.zoneclient
+namespace BluedotPublicApiClient.fenceclient
 {
     class DeleteFence
     {
@@ -23,11 +25,17 @@ namespace BluedotPublicApiClient.zoneclient
             String bdApplicationApiKey  = "a46fc46a-63ac-4c0c-8a9c-3c9aafd88e46"; //This apiKey is generated when you create an application
             String bdZoneId             = "3846fa1d-11f7-4044-8eab-0977f90d987e"; //This is the id of the zone being updated. This can be fetched by calling zones/getAll API
             String fenceId              = "fe6c357a-5273-4f95-8980-2e37ef2dc115"; //This is the id of the fence being updated. This can be fetched by calling zones/get API
-            
-            String bdRestBaseUrl        = "https://api.bluedotinnovation.com/1/fence/delete?";
+            String bdRestBaseUrl        = "https://api.bluedotinnovation.com/1/fences?";
 
             String bdRestUrl = bdRestBaseUrl + "customerApiKey=" + bdCustomerApiKey + "&apiKey=" + bdApplicationApiKey + "&zoneId=" + bdZoneId + "&fenceId=" + fenceId;
-            HttpClient httpRestClient = new HttpClient();
+            
+            WebRequestHandler handler = new WebRequestHandler();
+            X509Certificate2 certificate = new X509Certificate2();
+            handler.ClientCertificates.Add(certificate);
+            HttpClient httpRestClient = new HttpClient(handler);
+
+            //specify to use TLS 1.2 as default connection
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
 
             HttpResponseMessage serverResponse = httpRestClient.DeleteAsync(new Uri(bdRestUrl)).Result;
             if (serverResponse.IsSuccessStatusCode)

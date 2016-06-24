@@ -153,6 +153,8 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -166,12 +168,16 @@
     <Compile Include="application\CreateApplicationWithWebhook.cs" />
     <Compile Include="application\CreateApplication.cs" />
     <Compile Include="application\DeleteApplication.cs" />
+    <Compile Include="application\GetApplication.cs" />
     <Compile Include="application\UpdateApplicationWithWebhook.cs" />
     <Compile Include="application\UpdateApplication.cs" />
     <Compile Include="application\GetAllApplications.cs" />
     <Compile Include="beacons\AddBeaconToZone.cs" />
-    <Compile Include="beacons\CreateBeacon.cs" />
+    <Compile Include="beacons\AddBeacon.cs" />
+    <Compile Include="beacons\DeleteBeaconFromZone.cs" />
     <Compile Include="beacons\DeleteBeacon.cs" />
+    <Compile Include="beacons\GetAllBeacons.cs" />
+    <Compile Include="beacons\GetBeacon.cs" />
     <Compile Include="beacons\UpdateBeacon.cs" />
     <Compile Include="checkin\GetCheckinActivities.cs" />
     <Compile Include="fence\AddMultipleFences.cs" />
@@ -196,12 +202,17 @@
     <Compile Include="action\UpdateConditions.cs" />
     <Compile Include="fence\UpdateFence.cs" />
     <Compile Include="zone\DeleteZone.cs" />
+    <Compile Include="zone\GetZone.cs" />
     <Compile Include="zone\UpdateZone.cs" />
     <Compile Include="zone\GetAllZones.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

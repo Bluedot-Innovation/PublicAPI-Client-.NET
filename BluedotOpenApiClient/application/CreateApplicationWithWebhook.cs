@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web.Script.Serialization;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 /**
  * @author Bluedot Innovation
- * Create Application c# client demonstrates adding an application to to an existing the customer's account using .net http web api library
+ * Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+ * Create Application client demonstrates adding an application to to an existing the customer's account using .net http web api library
  */
 
 namespace BluedotPublicApiClient.applicationclient
@@ -51,7 +53,14 @@ namespace BluedotPublicApiClient.applicationclient
                     "}" +
                 "}";
 
-            HttpClient httpRestClient = new HttpClient();
+            WebRequestHandler handler = new WebRequestHandler();
+            X509Certificate2 certificate = new X509Certificate2();
+            handler.ClientCertificates.Add(certificate);
+            HttpClient httpRestClient = new HttpClient(handler);
+
+            //specify to use TLS 1.2 as default connection
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
             httpRestClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             HttpContent jsonApplicationContent         = new StringContent(@application);

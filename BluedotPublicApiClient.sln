@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluedotOpenApiClient", "BluedotOpenApiClient\BluedotOpenApiClient.csproj", "{5CF48D63-EDC0-402A-A415-7949EF9A3475}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluedotPublicApiClient", "BluedotOpenApiClient\BluedotPublicApiClient.csproj", "{5CF48D63-EDC0-402A-A415-7949EF9A3475}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
