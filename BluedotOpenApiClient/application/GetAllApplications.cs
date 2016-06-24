@@ -11,15 +11,15 @@ using System.Web.Script.Serialization;
 
 /**
  * @author Bluedot Innovation
- * Get Applications .NET client demonstrates listing or all applications for a given customer.
+ * Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+ * Get All Applications client demonstrates listing for all applications for a given customer.
  */
 namespace BluedotPublicApiClient.applicationclient
 {
     public class GetAllApplications
     {
-        private static String apiKey         = "b817bb5d-4b58-4f41-be5f-528fd4c7c95c";
         private static String customerApiKey = "ca4c8d11-6942-11e4-ba4b-a0481cdc3311";
-        String bdRestUrl                     = "https://api.bluedotinnovation.com/1/application/getAll?customerApiKey=" + customerApiKey + "&apiKey=" + apiKey;
+        private static String bdRestUrl      = "https://api.bluedotinnovation.com/1/applications?customerApiKey=" + customerApiKey;
 
         public void getAllApplicationsForCustomer()
         {
