@@ -7,7 +7,5 @@ Bluedot Public APIs expose the functionality of the back-end system - Bluedot Po
 
 The key requirements to begin the integration are: Register an account on Point Access by visiting the Bluedot website. (www.bluedotinnovation.com). 
 
-Activate your account by selecting the link in the activation email that is sent to the registered email address. 
-
-A second email will be sent confirming that your account has been activated and providing a Customer API Key. This key can also be found at any time under 'Edit Profile' (in the 'Account Management' tab on the Point Access Dashboard). This key is needed for authentication.
+An email will be sent confirming that your account has been activated and providing a Customer API Key. This key can also be found at any time under 'Edit Profile' (in the 'Account Management' tab on the Point Access Dashboard). This key is needed for authentication.
 
