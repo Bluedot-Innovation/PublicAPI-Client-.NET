@@ -26,7 +26,7 @@ namespace BluedotPublicApiClient.checkinactivityclient
         private static String bdZoneId            = "24d9a245-2087-421b-9972-2af2ee0970f1"; //This is the id of the zone being updated. This can be fetched by calling GET zones API
         private static String startDate           = "11/9/2015";
         private static String endDate             = "14/9/2015";
-        private static String bdRestBaseUrl       = "https://api.bluedotinnovation.com/1/checkinactivities?";
+        private static String bdRestBaseUrl       = "https://api.bluedotinnovation.com/2/checkinactivities?";
 
         public void getCheckInActivitiesByZoneAndDateRange()
         {
@@ -49,13 +49,13 @@ namespace BluedotPublicApiClient.checkinactivityclient
                 dynamic checkInRecords          = serializer.Deserialize(result, typeof(object)); // Result is an array of json
                 foreach (var checkInRecord in checkInRecords)
                 {
-                    Console.WriteLine("_id : {0} ", checkInRecord["_id"]);
-                    Console.WriteLine("creationTime : {0} ", checkInRecord["creationTime"]);
-                    Console.WriteLine("zoneId : {0} ", checkInRecord["notification"]["d"]["zoneId"]);
-                    Console.WriteLine("zoneName : {0} ", checkInRecord["notification"]["d"]["zoneName"]);
-                    Console.WriteLine("speed : {0} ", checkInRecord["notification"]["d"]["speed"]);
-                    Console.WriteLine("deviceType : {0} ", checkInRecord["notification"]["d"]["deviceType"]);
-                    Console.WriteLine("bluedotId : {0} ", checkInRecord["notification"]["d"]["bluedotId"]); // This is a fully randomised id and the real application id or device id is never stored in the db
+                    Console.WriteLine("Check-in ID : {0} ", checkInRecord["checkInId"]);
+                    Console.WriteLine("Check-in Time : {0} ", checkInRecord["checkInTime"]);
+                    Console.WriteLine("Zone ID : {0} ", checkInRecord["zoneId"]);
+                    Console.WriteLine("Zone Name : {0} ", checkInRecord["zoneName"]);
+                    Console.WriteLine("Device Speed : {0} ", checkInRecord["deviceSpeed"]);
+                    Console.WriteLine("Device Type : {0} ", checkInRecord["deviceType"]);
+                    Console.WriteLine("Installation Ref : {0} ", checkInRecord["installRef"]); // This is a fully randomised id and the real application id or device id is never stored in the db
                     Console.WriteLine("---------\n");
                 }                
             }
@@ -86,13 +86,13 @@ namespace BluedotPublicApiClient.checkinactivityclient
                 dynamic checkInRecords          = serializer.Deserialize(result, typeof(object));   // Result is an array of json
                 foreach (var checkInRecord in checkInRecords)
                 {
-                    Console.WriteLine("_id : {0} ", checkInRecord["_id"]);
-                    Console.WriteLine("creationTime : {0} ", checkInRecord["creationTime"]);
-                    Console.WriteLine("zoneId : {0} ", checkInRecord["notification"]["d"]["zoneId"]);
-                    Console.WriteLine("zoneName : {0} ", checkInRecord["notification"]["d"]["zoneName"]);
-                    Console.WriteLine("speed : {0} ", checkInRecord["notification"]["d"]["speed"]);
-                    Console.WriteLine("deviceType : {0} ", checkInRecord["notification"]["d"]["deviceType"]);
-                    Console.WriteLine("bluedotId : {0} ", checkInRecord["notification"]["d"]["bluedotId"]); // This is a fully randomised id and the real application id or device id is never stored in the db
+                    Console.WriteLine("Check-in ID : {0} ", checkInRecord["checkInId"]);
+                    Console.WriteLine("Check-in Time : {0} ", checkInRecord["checkInTime"]);
+                    Console.WriteLine("Zone ID : {0} ", checkInRecord["zoneId"]);
+                    Console.WriteLine("Zone Name : {0} ", checkInRecord["zoneName"]);
+                    Console.WriteLine("Device Speed : {0} ", checkInRecord["deviceSpeed"]);
+                    Console.WriteLine("Device Type : {0} ", checkInRecord["deviceType"]);
+                    Console.WriteLine("Installation Ref : {0} ", checkInRecord["installRef"]); // This is a fully randomised id and the real application id or device id is never stored in the db
                     Console.WriteLine("---------\n");
                 }                                
             }
