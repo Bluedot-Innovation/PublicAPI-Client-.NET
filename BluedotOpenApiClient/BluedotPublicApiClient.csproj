@@ -164,6 +164,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="action\CreateCustomActionWithCustomData.cs" />
     <Compile Include="action\DeleteAction.cs" />
     <Compile Include="application\CreateApplicationWithWebhook.cs" />
     <Compile Include="application\CreateApplication.cs" />
