@@ -13,7 +13,8 @@ using System.Security.Cryptography.X509Certificates;
 /**
  * @author Bluedot Innovation
  * Copyright (c) 2016 Bluedot Innovation. All rights reserved.
- * Update Application client demonstrates updating an existing application to to an existing the customer's account using .net http web api library
+ * Update Application with Zones Sync enabled client demonstrates updating an existing application to to an existing the customer's account
+ * using .net http web api library for which the zones sync will be available using Firebase push.
  * Pass the applicationId of the application to be updated.
  */
 
@@ -38,9 +39,15 @@ namespace BluedotPublicApiClient.applicationclient
                "}," +
                "\"content\": { " +
                    "\"application\" : {" +
-                        "\"applicationId\":" + "\"" + bdApplicationId + "\"," + /*This is the id of the application as opposed to the api key. This is returned when the application/getAll is called*/
+                        /*This is the id of the application as opposed to the api key. 
+                         * This is returned when the application/getAll is called.*/
+                        "\"applicationId\":" + "\"" + bdApplicationId + "\"," + 
                         /* Time in Hour:Minute format.*/
-                        "\"nextRuleUpdateIntervalFormatted\": \"00:10\"" +
+                        "\"nextRuleUpdateIntervalFormatted\": \"00:10\"," +
+                        /*The Web API key from Firebase project settings. 
+                        * Using this key our backend will be able to communicate with Firebase to deliver the 
+                        * zones that need to be synced to your application.*/
+                        "\"firebaseApiKey\": \"gDZyt1Bj_Y6S8BKyQfKH6uZ9wc475hrRlGA_6lS\"" +
                    "}" +
                 "}" +
              "}";

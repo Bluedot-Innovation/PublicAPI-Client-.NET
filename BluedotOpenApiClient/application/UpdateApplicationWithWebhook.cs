@@ -13,7 +13,7 @@ using System.Security.Cryptography.X509Certificates;
 /**
  * @author Bluedot Innovation
  * Copyright (c) 2016 Bluedot Innovation. All rights reserved.
- * Update Application client demonstrates adding an application to to an existing the customer's account using .net http web api library
+ * Update Application client demonstrates updating an exsiting application to to an existing the customer's account using .net http web api library
  * Pass the applicationId of the application to be updated.
  */
 
@@ -38,7 +38,9 @@ namespace BluedotPublicApiClient.applicationclient
                "}," +
                "\"content\": { " +
                    "\"application\" : {" +
-                             "\"applicationId\":" + "\"" + bdApplicationId + "\"," + /*This is the id of the application as opposed to the api key. This is returned when the application/getAll is called*/
+                             /*This is the id of the application as opposed to the api key. 
+                              * This is returned when the application/getAll is called*/
+                             "\"applicationId\":" + "\"" + bdApplicationId + "\"," + 
                              /* Time in Hour:Minute format.*/
                              "\"nextRuleUpdateIntervalFormatted\": \"00:10\"," +
                              "\"webhook\": {" +

@@ -166,10 +166,12 @@
   <ItemGroup>
     <Compile Include="action\CreateCustomActionWithCustomData.cs" />
     <Compile Include="action\DeleteAction.cs" />
+    <Compile Include="application\CreateApplicationZonesSyncEnabled.cs" />
     <Compile Include="application\CreateApplicationWithWebhook.cs" />
     <Compile Include="application\CreateApplication.cs" />
     <Compile Include="application\DeleteApplication.cs" />
     <Compile Include="application\GetApplication.cs" />
+    <Compile Include="application\UpdateApplicationZonesSyncEnabled.cs" />
     <Compile Include="application\UpdateApplicationWithWebhook.cs" />
     <Compile Include="application\UpdateApplication.cs" />
     <Compile Include="application\GetAllApplications.cs" />
@@ -196,6 +198,7 @@
     <Compile Include="action\CreateURLActionWithConditions.cs" />
     <Compile Include="action\CreateVibrationAction.cs" />
     <Compile Include="action\CreateVibrationActionWithConditions.cs" />
+    <Compile Include="zone\PostZonesSync.cs" />
     <Compile Include="zone\CreateZone.cs" />
     <Compile Include="action\CreateAllActionsWithAllConditions.cs" />
     <Compile Include="fence\AddFence.cs" />
