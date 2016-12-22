@@ -20,7 +20,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace BluedotPublicApiClient.applicationclient
 {
-    public class UpdateApplication
+    public class UpdateApplicationZonesSyncEnabled
     {
         public void update()
         {
