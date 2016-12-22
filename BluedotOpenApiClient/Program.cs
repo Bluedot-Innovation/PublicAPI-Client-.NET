@@ -23,8 +23,8 @@ namespace BluedotPublicApiClient
         static void Main(string[] args)
         {
             /*Create a new zone*/
-            CreateZone bdCreateZoneClient = new CreateZone();
-            bdCreateZoneClient.createZoneWithTimeActive();
+            CreateCompleteZone bdCreateCompleteZoneClient = new CreateCompleteZone();
+            bdCreateCompleteZoneClient.createCompleteZoneActiveAllDay();
 
             /*Get a list of zone id and name for a given customer*/
             GetAllZones bdGetZonesClient = new GetAllZones();

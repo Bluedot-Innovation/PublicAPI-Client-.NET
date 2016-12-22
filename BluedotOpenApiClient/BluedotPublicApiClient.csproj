@@ -192,12 +192,10 @@
     <Compile Include="action\CreateCustomActionWithConditions.cs" />
     <Compile Include="action\CreateMessageAction.cs" />
     <Compile Include="action\CreateMessageActionWithConditions.cs" />
-    <Compile Include="action\CreateSoundAction.cs" />
-    <Compile Include="action\CreateSoundActionWithConditions.cs" />
     <Compile Include="action\CreateURLAction.cs" />
     <Compile Include="action\CreateURLActionWithConditions.cs" />
-    <Compile Include="action\CreateVibrationAction.cs" />
-    <Compile Include="action\CreateVibrationActionWithConditions.cs" />
+    <Compile Include="zone\UpdateCompleteZone.cs" />
+    <Compile Include="zone\CreateCompleteZone.cs" />
     <Compile Include="zone\PostZonesSync.cs" />
     <Compile Include="zone\CreateZone.cs" />
     <Compile Include="action\CreateAllActionsWithAllConditions.cs" />
