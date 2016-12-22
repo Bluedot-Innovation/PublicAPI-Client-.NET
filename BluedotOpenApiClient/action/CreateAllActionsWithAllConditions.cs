@@ -62,16 +62,6 @@ namespace BluedotPublicApiClient.actionclient
             postToService(getJsonMessageActionWithConditions());
         }
 
-        public void addConditionsToVibrationAction()
-        {
-            postToService(getJsonVibrationActionWithConditions());
-        }
-
-        public void addConditionsToSoundAction()
-        {
-
-        }
-
         private static String getJsonURLActionWithConditions()
         {
             String urlActionWithCondtionsJson =
@@ -164,53 +154,5 @@ namespace BluedotPublicApiClient.actionclient
          return action;
         }
 
-        private static String getJsonVibrationActionWithConditions()
-        {
-            String vibrationActionWithCondtionsJson =
-                 "{" +
-                    "\"security\": {" +
-                        "\"apiKey\":" + "\"" + bdApplicationApiKey + "\"," +
-                        "\"customerApiKey\":" + "\"" + bdCustomerApiKey + "\"" +
-                    "}," +
-                    "\"content\": {" +
-                        "\"zone\": {" +
-                            "\"zoneId\":" + "\"" + bdZoneId + "\"," +
-                            "\"actions\": {" +
-                            "\"vibrationActions\": [" +
-                                "{" +
-                                "\"name\": \"A vibration action\"" +
-                                    "\"conditions\": {" +
-                                        "\"percentageCrossed\":" +
-                                            "[" +
-                                                "{" +
-                                                    "\"percentage\": 50," +
-                                                    "\"timeoutPeriod\": \"00:05\"" +
-                                                "}" +
-                                            "]," +
-                                        "\"dateRange\": [" +
-                                            "{" +
-                                                "\"start\": \"01/03/2014\"," +
-                                                "\"end\": \"14/12/2014\"" +
-                                            "}" +
-                                        "]," +
-                                        "\"timeActive\": [{" +
-                                            "\"from\": {" +
-                                                "\"time\": \"06:01\"," +
-                                                "\"period\": \"am\" " +
-                                            "}," +
-                                            "\"to\": {" +
-                                                "\"time\": \"11:00\"," +
-                                                "\"period\": \"pm\" " +
-                                            "}" +
-                                        "}]" +
-                                    "}" +
-                                "}" +
-                            "]" +
-                          "}" +
-                        "}" +
-                    "}" +
-                "}";
-            return vibrationActionWithCondtionsJson;
-        }
     }
 }
