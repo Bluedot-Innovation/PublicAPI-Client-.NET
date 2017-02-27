@@ -71,7 +71,8 @@ namespace BluedotPublicApiClient.beaconclient
                         "\"beacons\": [" +
 				            "{" +
 					            "\"beaconId\": " +" \"" + bdBeaconId + "\" " +
-					    	    "\"proximity\": 1" +
+					    	    "\"proximity\": 1," +
+                                "\"order\": 1" +
 					        "}"+
 					    "]"+
 				    "}"+

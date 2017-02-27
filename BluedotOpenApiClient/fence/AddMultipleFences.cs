@@ -68,6 +68,7 @@ namespace BluedotPublicApiClient.fenceclient
                      "\"fences\": {" +
                          "\"circles\": [" +
                              "{" +
+                                 "\"order\": 1," +
                                  "\"name\": \"Circular fence-added through API 01\"," +
                                  "\"color\": \"#000fff\"," +
                                  "\"radius\": 20.235," +
@@ -77,6 +78,7 @@ namespace BluedotPublicApiClient.fenceclient
                                  "}" +
                              "}," +
                              "{" +
+                                 "\"order\": 2," +
                                  "\"name\": \"Circular fence-added through API 02\"," +
                                  "\"color\": \"#000fff\"," +
                                  "\"radius\": 30," +
@@ -88,6 +90,7 @@ namespace BluedotPublicApiClient.fenceclient
                          "]," +
                          "\"rectangles\": [" +
                             "{" +
+                                "\"order\": 3," +
                                 "\"name\": \"Bounding Box-1\"," +
                                 "\"color\": \"#3559ef\"," +
                                 "\"northEast\": {" +
@@ -102,6 +105,7 @@ namespace BluedotPublicApiClient.fenceclient
                         "]," +
                         "\"polygons\": [" +
                             "{" +
+                                "\"order\": 4," +
                                 "\"name\": \"Polygon-2\"," +
                                 "\"color\": \"#000fff\"," +
                                 "\"vertices\": [" +
@@ -126,6 +130,7 @@ namespace BluedotPublicApiClient.fenceclient
                         "]," +
                         "\"polylines\": [" +
                         "{" +
+                            "\"order\": 5," +
                             "\"name\": \"Geoline-1\"," +
                             "\"color\": \"#000fff\"," +
                             "\"vertices\": [" +

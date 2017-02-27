@@ -71,6 +71,7 @@ namespace BluedotPublicApiClient.fenceclient
                      "\"fences\": {" +
                          "\"circles\": [" +
                              "{" +
+                                 "\"order\": 1," +
                                  "\"name\": \"Fence-0\"," +
                                  "\"color\": \"#b3a0d\"," +
                                  "\"radius\": 12.855266312171226," +
@@ -102,6 +103,7 @@ namespace BluedotPublicApiClient.fenceclient
                          "\"fences\": {" +
                             "\"rectangles\": [" +
                                 "{" +
+                                    "\"order\": 2," +
                                     "\"name\": \"Bounding Box-1\"," +
                                     "\"color\": \"#3dcb69\"," +
                                     "\"northEast\": {" +
@@ -136,6 +138,7 @@ namespace BluedotPublicApiClient.fenceclient
                                     "\"fences\": {" +
                                     "\"polygons\": [" +
                                         "{" +
+                                            "\"order\": 3," +
                                             "\"name\": \"Polygon-1\"," +
                                             "\"color\": \"#a0d7be\"," +
                                             "\"vertices\": [" +
@@ -207,6 +210,7 @@ namespace BluedotPublicApiClient.fenceclient
                                     "\"fences\": {" +
                                     "\"polylines\": [" +
                                         "{" +
+                                            "\"order\": 4," +
                                             "\"name\": \"Geoline-1\"," +
                                             "\"color\": \"#a0d7be\"," +
                                             "\"vertices\": [" +
